@@ -8,6 +8,7 @@ class tiny {
     constructor() {
         this.container = document.createElement('div');
         this.container.style.fontSize = "14px";
+        this.container.style.margin = "2px"
 
         this.lastTickTime = 0;
         this.lastUpdate = 0;

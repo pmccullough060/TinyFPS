@@ -1,0 +1,7 @@
+.fps{
+    display: flex;
+    position: absolute;
+    font-size: small;
+    top: 0;
+    Right: 0;
+}
