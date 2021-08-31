@@ -33,17 +33,9 @@ class tiny {
 
         var colour;
 
-        switch(fps){
-            case fps < 20:
-                colour = "red";
-                break;
-            
-            case fps < 50:
-                colour = "amber";
-
-            default:
-                colour = "green";
-        }
+        if(fps < 20) { colour = "red"; } else
+        if(fps < 50) { colour = "amber"; } else
+        { colour = "green" }
 
         this.container.textContent= `${ fps } FPS`;
         this.container.style.color = colour;
