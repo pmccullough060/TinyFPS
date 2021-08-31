@@ -7,15 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="./src/tinyfps"></script>
+
+    <!-- container for the fps counter -->
+    <div id="fps"></div>
+
+    <script src="src/tinyfps.js"></script>
 
     <script>
 
+        var fpsDiv = document.getElementById('fps');
+
+        var tinyfps = new tiny();
+
+        //adding tinyfps to the DOM
+        fpsDiv.appendChild(tinyfps.container);
+
         function animate(){
             requestAnimationFrame(animate);
-
-            //progress bar ticker goes here:
-
+            tinyfps.tick();
         }
 
         animate();
